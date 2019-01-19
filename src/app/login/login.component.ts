@@ -11,7 +11,7 @@ import { MatDialog } from '@angular/material'
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router, private zns: LoginService, private reoute: ActivatedRoute) { }
+  constructor(private router: Router, private zns: LoginService, private route: ActivatedRoute) { }
 
   usuarios: any = [];//variable de prueba para retorno de servicio
   user: any = "";//variable que toma el usuario
