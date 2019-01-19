@@ -99,6 +99,8 @@ import { LoginComponent } from './login/login.component';
 import { TemplateComponent } from './template/template.component';
 import { HistorialTransferenciaComponent } from './historial-transferencia/historial-transferencia.component';
 
+import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -171,7 +173,13 @@ import { HistorialTransferenciaComponent } from './historial-transferencia/histo
         TooltipModule,
         TreeModule,
         TreeTableModule,
-        VirtualScrollerModule
+        VirtualScrollerModule,
+        SweetAlert2Module.forRoot({
+            buttonsStyling: false,
+            customClass: 'modal-content',
+            confirmButtonClass: 'btn btn-primary',
+            cancelButtonClass: 'btn'
+        })
     ],
     declarations: [
         AppComponent,

@@ -16,20 +16,35 @@ export class LoginComponent implements OnInit {
   usuarios: any = [];//variable de prueba para retorno de servicio
   user: any = "";//variable que toma el usuario
   contra: any = "";//variable que toma la contraseña
-  id: number = 0;
+  correcto: any = [];
+  incorrecto: any = [];
   ngOnInit() {
 
   }
 
   btnLogin() {
-    this.id = 3;
     console.log("USER=:>", this.user);
     console.log("CONTRA=:>", this.contra);
-    for (let i = 0; i <= this.id; i++) {
-      this.zns.getListaCuentas(i).subscribe((data) => {
-        this.usuarios = data;
-      });
-    }
-    console.log("DATOS=:>",this.usuarios.length);
+    this.zns.getListaCuentas().subscribe((data) => {
+      this.usuarios = data;
+      let j = 0;
+      let k = 0;
+      for (let i = 0; i < this.usuarios.length; i++) {
+        if ((this.user == this.usuarios[i].usuario) && (this.contra == this.usuarios[i].clave)) {
+          this.correcto[j] = this.usuarios[i];
+          j = j + 1;
+        } else {
+          this.incorrecto[k] = this.usuarios[i];
+          k = k + 1;
+        }
+      }
+      if (this.correcto.length !=0) {
+        console.log("Correcto=:>",this.correcto);
+        this.router.navigate(["/template/htransferencia"])
+      }else{
+        console.log("ERROR...");
+        location.reload();
+      }
+    });
   }
 }
