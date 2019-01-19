@@ -97,6 +97,7 @@ import { EventService } from './demo/service/eventservice';
 import { NodeService } from './demo/service/nodeservice';
 import { LoginComponent } from './login/login.component';
 import { TemplateComponent } from './template/template.component';
+import { HistorialTransferenciaComponent } from './historial-transferencia/historial-transferencia.component';
 
 @NgModule({
     imports: [
@@ -193,7 +194,8 @@ import { TemplateComponent } from './template/template.component';
         FileDemoComponent,
         DocumentationComponent,
         LoginComponent,
-        TemplateComponent
+        TemplateComponent,
+        HistorialTransferenciaComponent
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },

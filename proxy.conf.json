@@ -1,0 +1,7 @@
+{
+    "/Banca-web/api/*": {
+        "target": "http://40.121.87.240:8086",
+        "secure": false,
+        "changeOrigin": true
+    }
+}

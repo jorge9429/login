@@ -15,13 +15,15 @@ import { FileDemoComponent } from './demo/view/filedemo.component';
 import { DocumentationComponent } from './demo/view/documentation.component';
 import { LoginComponent } from './login/login.component';
 import { TemplateComponent } from './template/template.component';
+import { HistorialTransferenciaComponent } from './historial-transferencia/historial-transferencia.component';
 
 
 export const routes: Routes = [
     { path: 'login', component: LoginComponent },
     {
         path: 'template', component: TemplateComponent, children: [
-            { path: '', component: DashboardDemoComponent },
+            { path: 'htransferencia', component: HistorialTransferenciaComponent }
+            /* { path: '', component: DashboardDemoComponent },
             { path: 'sample', component: SampleDemoComponent },
             { path: 'forms', component: FormsDemoComponent },
             { path: 'data', component: DataDemoComponent },
@@ -33,7 +35,7 @@ export const routes: Routes = [
             { path: 'empty', component: EmptyDemoComponent },
             { path: 'charts', component: ChartsDemoComponent },
             { path: 'file', component: FileDemoComponent },
-            { path: 'documentation', component: DocumentationComponent }
+            { path: 'documentation', component: DocumentationComponent } */
         ]
     },
 
