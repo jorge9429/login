@@ -96,6 +96,7 @@ import { CountryService } from './demo/service/countryservice';
 import { EventService } from './demo/service/eventservice';
 import { NodeService } from './demo/service/nodeservice';
 import { LoginComponent } from './login/login.component';
+import { TemplateComponent } from './template/template.component';
 
 @NgModule({
     imports: [
@@ -191,7 +192,8 @@ import { LoginComponent } from './login/login.component';
         EmptyDemoComponent,
         FileDemoComponent,
         DocumentationComponent,
-        LoginComponent
+        LoginComponent,
+        TemplateComponent
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },
