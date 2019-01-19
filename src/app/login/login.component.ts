@@ -23,8 +23,6 @@ export class LoginComponent implements OnInit {
   }
 
   btnLogin() {
-    console.log("USER=:>", this.user);
-    console.log("CONTRA=:>", this.contra);
     this.zns.getListaCuentas().subscribe((data) => {
       this.usuarios = data;
       let j = 0;
@@ -39,10 +37,8 @@ export class LoginComponent implements OnInit {
         }
       }
       if (this.correcto.length !=0) {
-        console.log("Correcto=:>",this.correcto);
         this.router.navigate(["/template/htransferencia"])
       }else{
-        console.log("ERROR...");
         location.reload();
       }
     });
