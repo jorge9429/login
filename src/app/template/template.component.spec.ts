@@ -2,24 +2,33 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TemplateComponent } from './template.component';
 
-describe('TemplateComponent', () => {
-  let component: TemplateComponent;
-  let fixture: ComponentFixture<TemplateComponent>;
+import { RouterTestingModule } from '@angular/router/testing';
+import { AppTopBarComponent } from '../app.topbar.component';
+import { AppMenuComponent, AppSubMenuComponent } from '../app.menu.component';
+import { AppFooterComponent } from '../app.footer.component';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
 
+describe('TemplateComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TemplateComponent ]
-    })
-    .compileComponents();
-  }));
+        imports: [
+            ScrollPanelModule,
+            RouterTestingModule
+        ],
+        declarations: [
+            AppTopBarComponent,
+            AppMenuComponent,
+            AppSubMenuComponent,
+            AppFooterComponent,
+            TemplateComponent
+        ],
+    }).compileComponents();
+}));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(TemplateComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+it('should create the app', async(() => {
+    const fixture = TestBed.createComponent(TemplateComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app).toBeTruthy();
+}));
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });

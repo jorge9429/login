@@ -1,10 +1,35 @@
-<div class="login-topbar">
-  <img src="../layout/images/logo-olympia-white.png" alt="olympia-layout" />
-  <span class="app-title">Olympia</span>
-</div>
-<div class="login-panel">
-  <h1>SIGN IN TO OLYMPIA</h1>
-  <p>Welcome, please use the form to sign-in.</p>
+<!-- <div class="login-panel">
+   Aqui empieza el formulario 
+  <div style="text-align:center;">
+    <table  border="1" style="margin: 0 auto;">
+      <tr>
+        <h1>WELCOME TO BANQUITO SYSTEM</h1>
+      </tr>
+      <tr>
+        <p>Please use the form to sign-in.</p>
+      </tr>
+      <tr>
+        <div class="ui-g-12 ui-md-4" style="text-align:center;">
+          <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+            <input type="text" pInputText placeholder="Username">
+          </div>
+        </div>
+      </tr>
+      <tr>
+        <div class="ui-g-12 ui-md-4" style="text-align:center;">
+          <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="pi pi-lock"></i></span>
+            <input type="password" pInputText placeholder="Password">
+          </div>
+        </div>
+      </tr>
+      <tr>
+        <button pButton type="button" label="Holi" class="ui-button-rounded"></button>
+      </tr>
+    </table>
+  </div>
+
   <div class="input-wrapper">
     <label for="username">Username</label>
     <input type="text" autocomplete="off" id="username" [(ngModel)]="user" class="ui-inputtext ui-widget">
@@ -13,8 +38,35 @@
     <label for="password">Password</label>
     <input type="password" autocomplete="off" id="password" [(ngModel)]="contra" class="ui-inputtext ui-widget">
   </div>
-  <button id="btnGuardar" mat-raised-button color="primary" style="width:150px;height:35px;" (click)="btnLogin()"  >Guardar</button>
+  <button id="btnGuardar" mat-raised-button color="primary" style="width:150px;height:35px;" (click)="btnLogin()">Guardar</button>
+
 
   <div class="separator"></div>
 
-</div>
+</div> -->
+
+<body>
+  <!-- <form (ngSubmit)="submit()"> -->
+    <div class="container">
+      <h1>BANQUITO</h1>
+      <div class="ui-g-12 ui-md-4" style="text-align:center;width: 130%;">
+        <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+          <input type="text" [(ngModel)]="user" pInputText placeholder="Username">
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="ui-g-12 ui-md-4" style="text-align:center; width: 130%;">
+        <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon"><i class="pi pi-lock"></i></span>
+          <input type="password" [(ngModel)]="contra" pInputText placeholder="Password">
+        </div>
+      </div>
+      <br>
+      <br>
+      <button id="btnGuardar" mat-raised-button color="primary" style="width:150px;height:35px;" (click)="btnLogin()">Login</button>
+    </div>
+  <!-- </form> -->
+
+</body>

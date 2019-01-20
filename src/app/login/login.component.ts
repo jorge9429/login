@@ -22,7 +22,12 @@ export class LoginComponent implements OnInit {
 
   }
 
+  submit(){
+    this.btnLogin();
+  }
   btnLogin() {
+    console.log("USUER:",this.user);
+    console.log("CONTR:",this.contra);
     this.zns.getListaCuentas().subscribe((data) => {
       this.usuarios = data;
       let j = 0;
