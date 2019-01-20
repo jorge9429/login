@@ -19,7 +19,7 @@ import { HistorialTransferenciaComponent } from './historial-transferencia/histo
 
 
 export const routes: Routes = [
-    { path: 'login', component: LoginComponent },
+    { path: '', component: LoginComponent },
     {
         path: 'template', component: TemplateComponent, children: [
             { path: 'htransferencia', component: HistorialTransferenciaComponent }
